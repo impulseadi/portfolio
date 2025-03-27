@@ -1,17 +1,28 @@
 import React from "react";
+import batman from "./assets/batman.jpg"; // Import the image
 
 const Hero = () => {
   return (
     <div
-      className="h-screen w-full bg-cover bg-center flex items-end justify-center pb-16 md:pb-24 lg:pb-32"
+      className="h-screen w-full bg-cover bg-center flex items-center justify-center md:justify-end"
       style={{
-        backgroundImage:
-          "url('https://images.hdqwalls.com/download/the-batman-2020-logo-4k-ek-1920x1080.jpg')",
+        backgroundImage: `url(${batman})`, // Use the imported image here
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundColor: "#f41e14", // Fallback red background
       }}
     >
-      <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#f41e14] via-red-600 to-[#f41e14] text-transparent bg-clip-text">
-        Welcome to the Batcave
-      </h1>
+      <div className="text-center md:text-left md:mr-16">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-black via-gray-800 to-black text-transparent bg-clip-text">
+          Welcome to the
+        </h1>
+        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 text-transparent bg-clip-text inline-block">
+          Bat
+        </h2>
+        <h3 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-black inline-block">
+          Cave
+        </h3>
+      </div>
     </div>
   );
 };
