@@ -14,7 +14,7 @@ const Hero = () => {
     >
       <div className="text-center md:text-left md:mr-16">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-black via-gray-800 to-black text-transparent bg-clip-text">
-          Welcome to the
+          Welcome to the Aditya's
         </h1>
         <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 text-transparent bg-clip-text inline-block">
           Bat
