@@ -37,7 +37,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="w-[140px] md:w-[160px] lg:w-[180px] min-h-[140px] md:min-h-[160px] lg:min-h-[180px] flex flex-col items-center justify-center text-white rounded-xl shadow-lg bg-cover bg-center bg-no-repeat"
+            className="w-[140px] md:w-[160px] lg:w-[180px] min-h-[140px] md:min-h-[160px] lg:min-h-[180px] flex flex-col items-center justify-center text-white rounded-xl shadow-lg bg-cover bg-center bg-no-repeat transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:rotate-3 hover:border-4 hover:border-white"
             style={{
               backgroundImage: `url(${skill.image})`,
             }}
