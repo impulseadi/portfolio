@@ -32,32 +32,36 @@ const Projects = () => {
   return (
     <section
       className="relative py-20 px-6 text-white text-center bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url('https://png.pngtree.com/thumb_back/fw800/background/20231230/pngtree-textured-backdrop-of-black-rugged-concrete-wall-image_13783010.png')" }} // Replace with your preferred background
+      style={{
+        backgroundImage:
+          "url('https://png.pngtree.com/thumb_back/fw800/background/20231230/pngtree-textured-backdrop-of-black-rugged-concrete-wall-image_13783010.png')" // Replace with your preferred background
+      }}
     >
       {/* Dark Overlay for Readability */}
-      <div className="absolute inset-0 "></div>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* Content */}
       <div className="relative z-10">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-[#f41e14] via-red-600 to-[#f41e14] text-transparent bg-clip-text">
+        <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#f41e14] via-red-600 to-[#f41e14] text-transparent bg-clip-text">
           Case Files
         </h2>
-        <p className="mt-4 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 text-transparent bg-clip-text">
+        <p className="mt-4 text-lg sm:text-xl bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 text-transparent bg-clip-text">
           Confidential projects from the Batcave.
         </p>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
           {projects.map((project, index) => (
             <div key={index} className="flex flex-col items-center">
               <motion.div
                 className="relative p-6 rounded-lg shadow-lg overflow-hidden border border-[#f41e14] bg-cover bg-center"
                 style={{
-                  backgroundImage: "url(https://www.jokeruniverse.com/wp-content/gallery/mynov2011posts/batmanfiles4.jpg)" // Case file texture
+                  backgroundImage:
+                    "url(https://www.jokeruniverse.com/wp-content/gallery/mynov2011posts/batmanfiles4.jpg)" // Case file texture
                 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="w-full h-70 flex items-center justify-center">
+                <div className="w-full h-56 sm:h-64 flex items-center justify-center">
                   <img
                     src={project.image}
                     alt={project.name}
@@ -68,10 +72,10 @@ const Projects = () => {
 
               {/* Project Details */}
               <div className="mt-4 text-center max-w-sm">
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-[#f41e14] via-red-500 to-[#f41e14] text-transparent bg-clip-text">
+                <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#f41e14] via-red-500 to-[#f41e14] text-transparent bg-clip-text">
                   {project.name}
                 </h3>
-                <p className="mt-2 text-sm bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 font-bold text-transparent bg-clip-text">
+                <p className="mt-2 text-sm sm:text-base bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 font-bold text-transparent bg-clip-text">
                   {project.description}
                 </p>
 
@@ -81,7 +85,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-[#f41e14]  font-bold via-red-500 to-[#f41e14] text-transparent bg-clip-text hover:underline"
+                    className="bg-gradient-to-r from-[#f41e14] font-bold via-red-500 to-[#f41e14] text-transparent bg-clip-text hover:underline"
                   >
                     Live Demo
                   </a>
