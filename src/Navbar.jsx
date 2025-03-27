@@ -11,8 +11,8 @@ const Navbar = () => {
         <span className="text-[#f41e14]">CAVE</span>
       </div>
 
-      {/* Navigation Links with Gradient */}
-      <ul className="flex space-x-8">
+      {/* Navigation Links with Responsive Design */}
+      <ul className="hidden md:flex space-x-8">
         {["About", "Skills", "Case Files", "Contact"].map((text, index) => (
           <li key={index}>
             <a
@@ -24,6 +24,11 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden">
+        <button className="text-[#f41e14] text-3xl">&#9776;</button>
+      </div>
     </nav>
   );
 };
